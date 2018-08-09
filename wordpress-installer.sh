@@ -11,7 +11,7 @@ die() {
 
 install_wordpress() {
 	echo ""
-	echo -en "Do you want to remove all files under /var/www/html/ ? [y/n] "
+	echo -en ">>Do you want to remove all files under /var/www/html/ ? [y/n] "
 	read answer
 	echo ""
 	case "$answer" in
@@ -75,7 +75,7 @@ add_wordpress_user_on_mysql() {
 start_installation_wordpress() {
 	clear
 	echo ""
-	echo -en "Do you want to install wordpress ? [y/n] "
+	echo -en ">>Do you want to install wordpress ? [y/n] "
 	read answer
 	echo ""
 
@@ -92,7 +92,7 @@ start_installation_wordpress() {
 
 run_mysql_secure_installation() {
 	echo ""
-	echo -en "Do you want to run mysql_secure_installation ? [y/n] "
+	echo -en ">>Do you want to run mysql_secure_installation ? [y/n] "
 	read answer
 	echo ""
 
@@ -138,7 +138,7 @@ check_services() {
 
 	if [[ ! -z "$unstarted_services" ]]; then
 		echo ""
-		echo -en "Do you want to start the unstarted services ? [y/n] "
+		echo -en ">>Do you want to start the unstarted services ? [y/n] "
 		read answer
 		echo ""
 
@@ -182,7 +182,7 @@ check_packages() {
 
 	if [[ ! -z "$uninstalled_packages" ]]; then
 		echo ""
-		echo -en "Do you want to install the uninstalled packages ? [y/n] "
+		echo -en ">>Do you want to install the uninstalled packages ? [y/n] "
 		read answer
 		echo ""
 
